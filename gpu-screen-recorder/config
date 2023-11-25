@@ -1,0 +1,24 @@
+main.record_area_option focused
+main.record_area_width 1920
+main.record_area_height 1080
+main.fps 60
+main.merge_audio_tracks true
+main.audio_input Default input
+main.audio_input Default output
+main.quality very_high
+main.codec auto
+main.audio_codec opus
+main.framerate_mode auto
+main.advanced_view false
+main.overclock false
+streaming.service twitch
+streaming.key 
+streaming.start_recording_hotkey 65470 256
+record.save_directory /home/ahmed/Videos
+record.container mp4
+record.start_recording_hotkey 65470 256
+replay.save_directory /home/ahmed/Videos
+replay.container mp4
+replay.time 60
+replay.start_recording_hotkey 65470 256
+replay.save_recording_hotkey 65471 256
