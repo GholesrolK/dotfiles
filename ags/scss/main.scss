@@ -1,0 +1,89 @@
+@import "colors";
+
+
+* {
+  font-family: "CaskaydiaCove Nerd Font";
+  color: $on_surface;
+}
+
+//general
+@import "common";
+
+//modules
+@import "audio";
+@import "bar";
+@import "chatGPT";
+@import "clock";
+@import "indicator";
+@import "launcher";
+@import "mpris";
+@import "network";
+@import "notifications";
+@import "powermenu";
+@import "quicksettings";
+@import "roundedCorner";
+@import "systemtray";
+@import "title";
+@import "weather";
+@import "workspaces";
+
+#profile {
+  .control-pannel {
+    background: $background;
+    border: 3px solid $secondary;
+    padding: 8px;
+  }
+
+  .buttons-grid {
+    button {
+      background-color: $surface_container;
+      min-height: 38px;
+      min-width: 10rem;
+    
+      color: $on_surface;
+
+      &:hover {
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        background-color: $secondary;
+        color: $background;
+      }
+    }
+
+    .active {
+      background-color: $primary;
+      color: $background;
+    }
+  }
+
+  .profile {
+    border: 1px solid $surface_variant;
+    padding: 8px;
+    color: $on_surface;
+
+    .icon {
+      padding-right: 2px;
+    }
+
+    .user .icon {
+      color: $tertiary;
+    }
+
+    .host .icon {
+      color: $primary;
+    }
+
+    .distro .icon {
+      color: $secondary;
+    }
+
+    .kernel .icon {
+      color: $tertiary_fixed;
+    }
+
+    .uptime .icon {
+      color: $primary_fixed;
+    }
+  }
+}

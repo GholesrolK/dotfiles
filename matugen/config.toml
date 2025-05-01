@@ -1,0 +1,35 @@
+[templates.ags]
+input_path = '~/.config/matugen/templates/ags.scss'
+output_path = '~/.config/ags/scss/colors.scss'
+mode = "Dark"
+
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+mode = "Dark"
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+mode = "Dark"
+
+[templates.hypr]
+input_path = '~/.config/matugen/templates/hypr.conf'
+output_path = '~/hypr/colors.conf'
+mode = "Dark"
+
+
+
+
+[config]
+reload_apps = false
+set_wallpaper = true
+wallpaper_tool = 'Swww'
+swww_options = [
+	"--transition-step",
+	"10",
+	"--transition-fps",
+	"90"
+]
+

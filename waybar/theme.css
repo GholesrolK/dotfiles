@@ -1,0 +1,21 @@
+@import url('/home/ahmed/.cache/wal/colors-waybar.css');
+
+/* Main Colors */
+@define-color background        @color0;
+@define-color foreground        @color7;
+@define-color module-fg         @color7;
+
+/* Workspace Button Colors */
+@define-color active-bg         @color6;  /* Using cyan/teal */
+@define-color active-fg         @color0;
+@define-color hover-bg          @color14; /* Light cyan */
+@define-color hover-fg          @color0;
+
+/* Wlogout Colors */
+@define-color bar-bg            @color0;
+@define-color main-bg           @color0;
+@define-color main-fg           @color7;
+@define-color wb-act-bg         @color6;
+@define-color wb-act-fg         @color0;
+@define-color wb-hvr-bg         @color14;
+@define-color wb-hvr-fg         @color0;
