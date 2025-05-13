@@ -2,11 +2,12 @@ env = LIBVA_DRIVER_NAME,nvidia
 env = XDG_SESSION_TYPE,wayland
 env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-env = HYPRCURSOR_THEME,Bibata-Modern-Classic
-env = HYPRCURSOR_SIZE,24
+
 $mainMod = SUPER
 
-
+# binds
+source=binds.conf
+source=colors.conf
 
 debug {
   # damage_blink = true
@@ -17,7 +18,6 @@ monitor=Unknown-1 , disable
 cursor {
     no_hardware_cursors = true
 }
-
 input {
     kb_layout = us , ara
     kb_variant =
@@ -32,8 +32,6 @@ input {
         natural_scroll = no
 	      middle_button_emulation = true
         clickfinger_behavior = true
-        
-    
     }
 
     sensitivity = 0
@@ -41,7 +39,7 @@ input {
 gestures {
   workspace_swipe = true
     workspace_swipe_distance = 700
-    workspace_swipe_fingers = 3
+    workspace_swipe_fingers = 4
     workspace_swipe_cancel_ratio = 0.2
     workspace_swipe_min_speed_to_force = 5
 
@@ -53,8 +51,8 @@ gestures {
 }
 
 general {
-    gaps_in = 4
-    gaps_out = 5
+    gaps_in = 2
+    gaps_out = 3
     border_size = 2
     # col.active_border = rgba(CBA6F7C8) rgba(F38BA8C8) 45degb
     # col.inactive_border = rgba(1e1e1ec8) rgba(F38BA8C8) 45degb
@@ -70,7 +68,7 @@ group {
     }
 }
 decoration {
-    rounding = 0
+    rounding = 14
     
     blur {
         enabled = true
@@ -134,39 +132,33 @@ misc {
    animate_mouse_windowdragging = false
    #suppress_portal_warnings = true
    enable_swallow = true
-   swallow_regex=^(.*\.: )$
-   
+   swallow_regex=^(.*\.wezterm)$
    disable_hyprland_logo = true
    disable_splash_rendering = true
 }
 
 layerrule = blur, ^(.*)$
 layerrule = ignorealpha 0.3, ^(.*)$
+
 layerrule = noanim, ^(?!bar).*$
-
-
-
-
 
 windowrulev2 = opacity 0.8 0.6,class:^(codium)$
 windowrulev2 = opacity 0.8 0.6,class:^(thunar)$
 windowrulev2 = opacity 0.8 0.8,class:^(foot)$
-windowrulev2 = workspace 7, opacity 0.8 0.6,class:^(vesktop)$  
+windowrulev2 = workspace 1, opacity 0.8 0.6,class:^(vesktop)$  
 windowrulev2 = opacity 0.8 0.6,class:^(vesktop)$  
 windowrulev2 = opacity 0.8 0.6,class:^(Caprine)$
-windowrulev2 = workspace 1 , class:^(zen)$
-#workspace = 2, monitor:HDMI-A-1,default:true
-#workspace = 1, monitor:eDP-1
+windowrulev2 = workspace 2 , class:^(firefox)$
+workspace = 2, monitor:HDMI-A-1,default:true
+workspace = 1, monitor:eDP-1
 
 
 #autostart
 #DE related
-exec-once=kanshi &
-exec-once=nm-applet & 
-exec-once=hyprpaper & 
-exec-once=swww-daemon & 
-exec-once=fix_screenshare.sh &
-exec-once=hypridle &
-exec-once=waybar &
-exec-once=ags &
-exec-once=gpu-screen-recorder -w screen -f 60 -r 120 -c mp4 -a "default_output|default_input" -o /home/ahmed/Videos/ &
+exec-once=kanshi 
+exec-once=nm-applet
+exec-once=hyprpaper
+exec-once=swww-daemon
+exec-once=fix_screenshare.sh
+exec-once=hypridle
+exec-once=waybar
